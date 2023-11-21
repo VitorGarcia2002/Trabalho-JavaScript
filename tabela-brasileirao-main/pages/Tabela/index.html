@@ -141,10 +141,22 @@
           }
         });
 
+        localStorage.setItem("tabelaData", JSON.stringify(tabelaData));
         fillTable();
       }
 
       window.onload = function () {
+        var storedData = localStorage.getItem("tabelaData");
+        tabelaData = storedData ? JSON.parse(storedData) : [];
+
+        if (tabelaData.length === 0) {
+          tabelaData = [
+            { pos: 1, time: "Botafogo", pts: 55, pj: 26, vit: 17, E: 4, der: 5, gm: 42, gc: 16, sg: 26 },
+            { pos: 2, time: "Bragantino", pts: 46, pj: 26, vit: 12, E: 10, der: 4, gm: 36, gc: 23, sg: 13 },
+            { pos: 3, time: "Grêmio", pts: 44, pj: 26, vit: 13, E: 5, der: 8, gm: 42, gc: 35, sg: 7 },
+          ];
+        }
+
         fillTable();
       };
     </script>

@@ -52,9 +52,8 @@
       <img src="https://color-hex.org/colors/c27e31.png" > Classificados para a Pré-Libertadores<br>
       <img src="https://color-hex.org/colors/49c231.png" > Classificados para a Copa Sul-Americana<br>
       <img src="https://color-hex.org/colors/c23131.png" > Rebaixados
-
-      
     </div>
+    
     <script>
       var tabelaData = [
         { pos: 1, time: "Botafogo", pts: 55, pj: 26, vit: 17, E: 4, der: 5, gm: 42, gc: 16, sg: 26 },
@@ -106,7 +105,7 @@
 
         var newE = prompt("Digite a nova quantidade de empates:");
         if (newE === null) {
-        return;
+          return;
         }
         tabelaData[index].E = parseInt(newE);
 
@@ -149,7 +148,6 @@
         fillTable();
       };
     </script>
-    
 
   </main>
 </body>
